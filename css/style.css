@@ -4,11 +4,13 @@
   font-family: "Raleway", "sans sérif";
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 :root {
   --primary-color: #0065fc;
   --dark-grey: #d9d9d9;
   --grey: #f2f2f2;
+  --light-blue: #deebff;
 }
 body {
   display: flex;
@@ -106,20 +108,23 @@ div .fa-solid.fa-magnifying-glass {
   margin: 30px 0;
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
-.filters-section h2 {
+.filters-title {
+  margin-top: 18px;
+}
+.filters-title h2 {
   margin-right: 15px;
-}
-.button-filter {
-  display: flex;
-  flex-direction: row;
 }
 .filters-box {
   display: flex;
   flex-direction: row;
 }
+.filters-box :hover {
+  background-color: var(--light-blue);
+}
 .button-filter {
+  display: flex;
+  flex-direction: row;
   padding: 15px;
   border: 2px solid var(--dark-grey);
   border-radius: 25px;
@@ -149,13 +154,14 @@ div .fa-solid.fa-magnifying-glass {
   padding: 5px 10px;
   color: #0065fc;
 }
-/* hébérgement-populaire*/
-.hebergement-populaire {
+
+/* --                            hébérgement-populaire                          --*/
+.lodging-popular {
   display: flex;
   justify-content: space-between;
 }
 
-.hebergement-populaire section {
+.lodging-popular section {
   background-color: var(--grey);
   padding: 30px;
   border-radius: 15px;
@@ -166,13 +172,13 @@ div .fa-solid.fa-magnifying-glass {
   width: 65%;
 }
 
-.hebergement-populaire section h2 {
+.lodging-popular section h2 {
   font-size: 22px;
   line-height: 26px;
   font-weight: 700;
 }
 
-.hebergement-card {
+.lodging-card {
   display: grid;
   justify-content: space-between;
   grid-template-rows: repeat(2, minmax(0, 1fr));
@@ -181,7 +187,7 @@ div .fa-solid.fa-magnifying-glass {
   margin-top: 30px;
 }
 
-.hebergement-card img {
+.lodging-card img {
   position: absolute;
   top: 0;
   left: 0;
@@ -195,6 +201,7 @@ div .fa-solid.fa-magnifying-glass {
   border-radius: 20px;
   padding: 5px;
   cursor: pointer;
+  box-shadow: 0px 3px 15px 0px #0000001a;
 }
 
 .card img {
@@ -339,14 +346,15 @@ div .fa-solid.fa-magnifying-glass {
 
 .text-element {
   display: flex;
-
   background-color: white;
   border-radius: 0 0 20px 20px;
 }
 .text-element h3 {
-  padding: 10px 0 0 10px;
-  text-align: center;
   height: 59px;
+  line-height: 59px;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 /* FOOTER */
@@ -355,7 +363,7 @@ div .fa-solid.fa-magnifying-glass {
   flex-direction: row;
   gap: 20%;
   width: 100%;
-  height: 200px;
+  height: 150px;
   background-color: var(--grey);
   margin-top: 65px;
   padding-top: 20px;
@@ -415,15 +423,64 @@ div h3 {
     transform: scale(1.02);
   }
   /* -- filters-part  --*/
+  .filters-section {
+    display: grid;
+    gap: 0;
+    padding: 0 20px;
+  }
+  .filters-title {
+    margin-top: 0;
+  }
+  .filters-title h2 {
+    margin-right: 0;
+  }
   .button-filter {
     padding: 10px;
   }
+  .button-filter p {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .button-filter i {
+    width: 10%;
+    height: 12px;
+  }
   .filters-box {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0%, 1fr));
+    align-items: center;
+    gap: 0 10px;
   }
 
   /*    CARDS SECTION    */
-  .hebergement-populaire {
+  .lodging-popular .hebergement {
+    background-color: white;
+    width: 100%;
+  }
+  .lodging-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-element :nth-child(1) {
+    order: 1;
+  }
+  .card-element :nth-child(2) {
+    order: 6;
+  }
+  .card-element :nth-child(3) {
+    order: 3;
+  }
+  .card-element :nth-child(4) {
+    order: 4;
+  }
+  .card-element :nth-child(5) {
+    order: 2;
+  }
+  .card-element :nth-child(6) {
+    order: 5;
+  }
+
+  .lodging-popular {
     display: flex;
     flex-direction: column-reverse;
   }
@@ -437,33 +494,19 @@ div h3 {
     flex-direction: column;
     justify-content: center;
   }
-  .activities .card-element {
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    box-shadow: 0px 3px 15px 0px #0000001a;
-    flex-basis: calc(50%);
-  }
-
-  .img-element img {
-    border-radius: 20px 20px 0px 0px;
-    object-fit: cover;
+  .card-element {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 100px;
   }
-
-  .img-element {
-    position: relative;
-    padding-bottom: 127%;
+  .text-element {
+  }
+  .card-element .img-element {
   }
 
   /* --       FOOTER      --*/
   footer {
     background-color: var(--grey);
-    height: 20%;
+    height: 10%;
   }
   .box {
     display: flex;
