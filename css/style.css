@@ -9,20 +9,14 @@
 
 :root {
   --primary-color: #0065fc;
+  --light-blue: #deebff;
   --dark-grey: #d9d9d9;
   --grey: #f2f2f2;
-  --light-blue: #deebff;
-}
-
-body {
-  display: flex;
-  justify-content: center;
 }
 
 a {
   text-decoration: none;
   color: black;
-  font-weight: 500;
 }
 
 .container {
@@ -32,6 +26,9 @@ a {
   padding: 0 50px;
 }
 
+/*
+NAV-BAR-SECTION
+*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -60,8 +57,9 @@ a {
   height: 19px;
 }
 
-/* --    SEARCH-SECTON    --*/
-
+/*
+FORM-SECTION
+*/
 .search-section h1 {
   font-size: 22px;
   font-weight: 700;
@@ -92,22 +90,21 @@ a {
 }
 
 .search-section div input {
-  border: none;
   font-size: 18px;
   font-weight: 700;
   height: 49px;
+  width: 15%;
   padding-left: 10px;
   border: 1px solid var(--grey);
 }
 
-.search-section div input .placeholder {
+input::placeholder {
   color: black;
 }
 
 .search-section div button {
   background-color: var(--primary-color);
   border: none;
-  padding: 15px, 16px, 15px, 16px;
   border-radius: 0 15px 15px 0;
   font-size: 18px;
   font-weight: 700;
@@ -115,31 +112,31 @@ a {
   color: white;
   cursor: pointer;
   height: 49px;
-  width: 10%;
+  width: 12%;
 }
 
-div .fa-solid.fa-magnifying-glass {
+.fa-solid.fa-magnifying-glass {
   display: none;
 }
 
-/*--  FILTERS-SECTION --*/
+/*
+FILTERS-SECTION
+*/
 .filters-section {
   margin: 30px 0;
+  gap: 15px;
   display: flex;
   flex-direction: row;
 }
 
 .filters-title {
-  margin-top: 18px;
-}
-
-.filters-title h2 {
-  margin-right: 15px;
+  padding-top: 6px;
 }
 
 .filters-box {
   display: flex;
   flex-direction: row;
+  gap: 10px;
 }
 
 .filters-box :hover {
@@ -149,25 +146,27 @@ div .fa-solid.fa-magnifying-glass {
 .button-filter {
   display: flex;
   flex-direction: row;
-  padding: 15px;
   border: 2px solid var(--dark-grey);
   border-radius: 25px;
-  margin: 8px 25px 8px 0;
+  padding: 12px 19px 12px 19px;
+  cursor: pointer;
 }
 
 .button-filter i {
-  font-weight: 700;
-  padding-right: 10px;
   color: var(--primary-color);
+  max-width: 22px;
+  max-height: 16px;
+  margin: 2px 10px 0 0;
 }
 
 .button-filter p {
   font-weight: 700;
-  padding-left: 6px;
-  font-size: 16px;
+  font-size: 17px;
 }
 
-/*--  INFO-SECTION --*/
+/*
+INFO-SECTION
+*/
 .info-section {
   display: flex;
   flex-direction: row;
@@ -179,11 +178,18 @@ div .fa-solid.fa-magnifying-glass {
 .info-section i {
   border: 1px solid var(--dark-grey);
   border-radius: 100%;
-  padding: 5px 10px;
+  padding: 4px 10px 6px 10px;
   color: #0065fc;
 }
 
-/* --                            hébérgement-populaire                          --*/
+.info-section p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/*
+HEBERGEMENT-POPULAIRE---SECTION
+*/
 #lodging-popular {
   display: flex;
   justify-content: space-between;
@@ -191,8 +197,9 @@ div .fa-solid.fa-magnifying-glass {
 
 #lodging-popular section {
   background-color: var(--grey);
-  padding: 30px;
+  padding: 25px;
   border-radius: 15px;
+  height: 530px;
 }
 
 .hebergement {
@@ -202,7 +209,6 @@ div .fa-solid.fa-magnifying-glass {
 
 #lodging-popular h2 {
   font-size: 22px;
-  line-height: 26px;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -210,27 +216,32 @@ div .fa-solid.fa-magnifying-glass {
 .lodging-card {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 25px;
+  margin-bottom: 20px;
 }
 
 .lodging-card .card {
   width: 30%;
-  height: 185px;
+  height: 180px;
   padding-bottom: 15px;
   border-radius: 20px;
   background-color: white;
   box-shadow: 0px 3px 15px 0px #0000001a;
 }
 
+.img-card {
+  width: 100%;
+  height: 104px;
+}
+
 .img-card img {
   width: 100%;
   height: 100px;
   border-radius: 20px 20px 0 0;
-  border: 5px;
   object-fit: cover;
-  padding: 5px;
+  padding: 4px;
 }
 
 .card-content {
@@ -238,12 +249,12 @@ div .fa-solid.fa-magnifying-glass {
 }
 
 .card-content h3 {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .card-subtitle {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 4px;
   font-size: 14px;
   font-weight: 400;
@@ -251,7 +262,7 @@ div .fa-solid.fa-magnifying-glass {
 
 .price {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .card-rating {
@@ -263,13 +274,14 @@ div .fa-solid.fa-magnifying-glass {
   display: inline;
 }
 
-.third-title {
+h2 a {
   font-size: 18px;
   font-weight: 700;
-  line-height: 21.13px;
 }
 
-/*   --- POPULAR SECTION ---- */
+/*
+POPULAR-SECTION
+*/
 .populaire {
   width: 33%;
 }
@@ -287,65 +299,55 @@ div .fa-solid.fa-magnifying-glass {
 .card-populaire {
   display: flex;
   flex-direction: column;
-  width: 369px;
+  width: 100%;
   gap: 30px;
 }
 
 .popular-card {
   background-color: white;
-  width: 88%;
-  height: 130px;
+  width: 100%;
+  height: 120px;
   border-radius: 20px;
   box-shadow: 0px 3px 15px 0px #0000001a;
   display: flex;
 }
 
 .card-img {
-  width: 40%;
+  width: 35%;
+  height: 100%;
 }
 
 .card-img img {
   object-fit: cover;
-  width: 90%;
+  width: 85%;
   height: 100%;
   border-radius: 20px 0 0 20px;
   border: 0 5px 5px white;
-  padding: 5px 0 5px 5px;
+  padding: 4px 0 4px 4px;
 }
 
 .content-card {
-  width: 70%;
-  height: 134px;
-  gap: 24px;
+  width: 65%;
+  height: 100px;
 }
 
 .content-card div {
-  width: 226px;
-  height: 83px;
-  gap: 5px;
-}
-
-.content-card .card-rating {
-  margin-top: 20px;
+  width: 100%;
+  height: 90px;
 }
 
 .card-title {
-  flex-wrap: wrap;
-  padding: 10px 0 5px 0;
+  padding-top: 10px;
   font-size: 16px;
-  line-height: 18.78px;
   font-weight: 700;
 }
 
-.content-card p {
-  margin: 0;
-}
-
-/*---               ACTIVITIES SECTION                        ---*/
+/*
+ACTIVITIES SECTION
+*/
 .activities h2 {
   font-size: 22px;
   font-weight: 700;
-  line-height: 26px;
   margin: 60px 0 30px 30px;
 }
 
@@ -353,6 +355,7 @@ div .fa-solid.fa-magnifying-glass {
   display: flex;
   padding: 0 30px;
   gap: 30px;
+  flex-direction: center;
 }
 
 .card-element {
@@ -360,13 +363,18 @@ div .fa-solid.fa-magnifying-glass {
   flex-direction: column;
   border-radius: 20px;
   box-shadow: 0px 3px 15px 0px #0000001a;
+  width: 295px;
+  height: 370px;
+}
+
+.img-element {
   width: 100%;
-  height: 350px;
+  height: 380px;
 }
 
 .img-element img {
   width: 100%;
-  height: 300px;
+  height: 320px;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
 }
@@ -379,13 +387,15 @@ div .fa-solid.fa-magnifying-glass {
   font-weight: 700;
 }
 
-/* FOOTER */
+/*
+FOOTER
+*/
 .box {
   display: flex;
   flex-direction: row;
   gap: 20%;
   width: 100%;
-  height: 150px;
+  height: 160px;
   background-color: var(--grey);
   margin-top: 65px;
   padding-top: 20px;
@@ -411,10 +421,10 @@ div h3 {
 
 /* -- 
 MEDIA QUERY 
---> HEADER  
+--> Version-mobile  
 --*/
 
-@media (max-width: 768px) {
+@media (max-width: 767.9px) {
   .container {
     padding: 0;
   }
@@ -427,18 +437,23 @@ MEDIA QUERY
 
   .navbar ul {
     padding: 20px;
-  }
-
-  .navbar img {
-    margin: 20px;
+    border-bottom: 2px solid var(--grey);
   }
 
   .navbar li:hover a {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     border-top: none;
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
   }
+
+  .navbar img {
+    margin-bottom: 20px;
+  }
+
+  /*
+  FORM-SECTION
+  */
 
   .search-section {
     padding: 0 20px;
@@ -452,7 +467,6 @@ MEDIA QUERY
     font-size: 14px;
   }
 
-  /* -- magnifying-button  --*/
   .search-section div button {
     display: none;
   }
@@ -482,7 +496,9 @@ MEDIA QUERY
     transform: scale(1.02);
   }
 
-  /* -- filters-part  --*/
+  /*
+  filters-part
+  */
   .filters-section {
     display: grid;
     gap: 0;
@@ -498,26 +514,24 @@ MEDIA QUERY
     margin-bottom: 10px;
   }
 
-  .button-filter {
-    padding: 10px;
-  }
-
-  .button-filter p {
-    font-weight: 700;
-    font-size: 14px;
-    text-align: center;
-    padding-left: 15px;
-  }
-
-  .button-filter i {
-    width: 10%;
-    height: 12px;
-  }
-
   .filters-box {
     display: grid;
     grid-template-columns: repeat(2, minmax(0%, 1fr));
     align-items: center;
+  }
+
+  .button-filter {
+    height: 45px;
+    padding: 12px 15px;
+  }
+
+  .button-filter i {
+    height: 10px;
+  }
+
+  .button-filter p {
+    font-weight: 700;
+    font-size: 13px;
   }
 
   .info-section {
@@ -537,6 +551,7 @@ MEDIA QUERY
   #lodging-popular .hebergement {
     background-color: white;
     width: 100%;
+    height: 1380px;
   }
 
   #lodging-popular {
@@ -546,33 +561,6 @@ MEDIA QUERY
 
   #lodging-popular .card {
     width: 100%;
-  }
-
-  .card-element :nth-child(1) {
-    order: 1;
-  }
-
-  .card-element :nth-child(2) {
-    order: 6;
-  }
-
-  .card-element :nth-child(3) {
-    order: 3;
-  }
-
-  .card-element :nth-child(4) {
-    order: 4;
-  }
-
-  .card-element :nth-child(5) {
-    order: 2;
-  }
-
-  .card-element :nth-child(6) {
-    order: 5;
-  }
-
-  .third-title {
   }
 
   /* popular-part */
@@ -607,9 +595,9 @@ MEDIA QUERY
     height: 100%;
   }
 
-  .content-card div {
+  .content-card {
     width: 90%;
-    padding-left: 5px;
+    padding-left: 10px;
   }
 
   /* --       ACTIVITIES - SECTION      --*/
@@ -624,6 +612,7 @@ MEDIA QUERY
 
   .elements .card-element {
     height: 160px;
+    width: 100%;
   }
 
   .card-element .img-element {
@@ -639,13 +628,10 @@ MEDIA QUERY
     padding: 5px;
   }
 
-  .text-element h3 {
-  }
-
   /* --       FOOTER      --*/
   footer {
     background-color: var(--grey);
-    height: 10%;
+    height: 410px;
   }
 
   .box {
@@ -659,7 +645,7 @@ MEDIA QUERY
 /*
 Version tablette
 */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .navbar {
     margin-bottom: 50px;
   }
@@ -672,8 +658,17 @@ Version tablette
     margin-bottom: 10px;
   }
 
+  .search-section div input {
+    width: 26%;
+  }
+
   .search-section div button {
-    width: 15%;
+    width: 20%;
+  }
+
+  .button-filter p {
+    font-weight: 700;
+    font-size: 14px;
   }
 
   #lodging-popular {
@@ -685,21 +680,27 @@ Version tablette
     margin-bottom: 50px;
   }
 
-  .populaire {
-    width: 100%;
+  .card-content h3 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  #lodging-popular .populaire {
     height: 252px;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
 
   .card-populaire {
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
     width: auto;
   }
 
   .popular-card {
-    height: 150px;
+    height: 110px;
+    width: 80%;
   }
 
   .card-img {
@@ -708,42 +709,60 @@ Version tablette
 
   .card-img img {
     width: 100%;
+    padding: 3px 0 3px 3px;
   }
 
   .content-card {
     width: 65%;
   }
 
-  .content-card div {
-    width: auto;
-  }
-
-  .card-title {
-    font-size: 16px;
+  .content-card .card-title {
+    font-size: 11.5px;
+    font-weight: 700;
     padding-left: 10px;
   }
 
   .content-card .card-subtitle {
     padding-left: 10px;
+    font-size: 11px;
   }
 
   .content-card .card-rating {
-    margin-top: 35px;
     padding-left: 10px;
+    font-size: 12px;
+  }
+
+  .activities .elements {
+    gap: 15px;
   }
 
   .card-element {
-    width: 80%;
-    height: 250px;
-    margin-bottom: 40px;
+    width: 90%;
+    height: 200px;
   }
 
-  .img-element {
+  .card-element .img-element {
     width: 100%;
   }
 
   .img-element img {
     width: 100%;
-    height: 190px;
+    height: 150px;
+  }
+
+  .text-element h3 {
+    font-size: 12px;
+    padding-top: 8px;
+  }
+
+  .box div a {
+    font-size: 14px;
+  }
+  div h3 {
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .box {
+    gap: 10%;
   }
 }
