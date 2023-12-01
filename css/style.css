@@ -327,7 +327,6 @@ POPULAR-SECTION
   width: 85%;
   height: 100%;
   border-radius: 20px 0 0 20px;
-  border: 0 5px 5px white;
   padding: 4px 0 4px 4px;
 }
 
@@ -360,7 +359,6 @@ ACTIVITIES SECTION
   display: flex;
   padding: 0 30px;
   gap: 30px;
-  flex-direction: center;
 }
 
 .card-element {
@@ -773,10 +771,12 @@ Version tablette
   .box div a {
     font-size: 14px;
   }
+
   div h3 {
     font-weight: 700;
     font-size: 15px;
   }
+
   .box {
     gap: 10%;
   }
